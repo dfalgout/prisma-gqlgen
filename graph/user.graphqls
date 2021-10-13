@@ -1,0 +1,21 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type User
+  @goModel(model: "github.com/dfalgout/prismagqlgen/prisma/db.UserModel") {
+  id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  roles: [String!]!
+  createdAt: Time!
+  updatedAt: Time!
+}
+
+input NewUser {
+  email: String!
+  password: String!
+  firstName: String!
+  lastName: String!
+}
